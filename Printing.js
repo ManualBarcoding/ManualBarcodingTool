@@ -55,12 +55,9 @@ function printBarcode(){
                     "^FO245,38,1^A0N,18 ^TBN,120,120 ^FD"
                     + name+ " "+ dateRecived +
                     "^FS ^FO10,105^A0N,20^FD"+supplier + " " +catalogueNumber + "^FS ^XZ"
-  //
-  // alert(printData);
+	console.log(printData);
 	writeToSelectedPrinter(printData);
-  // writeToSelectedPrinter("^XA^CF0,15^CI28^FO10,20^FD12234890987^FS^FO10,38^BXN,4,200^FD12234890987^FS^FO245,20,1^FDRec'd^FS^FO245,38,1^A0N,18^TBN,120,120^FDJennifer Kimball 2017-11-30^FS^FO10,105^A0N,20^FDSigma Aldrich 25467^FS^XZ");
-  // readFromSelectedPrinter()
+
 }
 window.onload = setup;
-//
 document.getElementById("PrintForm").addEventListener("submit", printBarcode);
